@@ -1,5 +1,5 @@
 # Private.Logik-aussagen-Converter
-Wandelt Logische Aussagen in Boolische Werte um
+Dieses Programm wandelt Logische Aussagen in Boolische Werte um.
 Damit das Programm funktioiert muss die korrekte Syntax eingehalten werden! 
 Regeln:
 1. Zwischen denn Logischen Operatoren, denn Logischen Ausdrücken und denn Klammern müssen Leerzeichen sein.

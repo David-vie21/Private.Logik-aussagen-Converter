@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Test Klasse: Wird nicht verwendet
 namespace Private.logik_aussagen
 {
     public class Class1       

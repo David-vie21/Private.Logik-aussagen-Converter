@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private.logik-aussagen", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private.Formel-Umwandler-Test-Klasse", "..\Private.Formel-Umwandler-Test-Klasse\Private.Formel-Umwandler-Test-Klasse.csproj", "{6EC1D460-E51B-4618-98AF-E87781B0BEBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private.logik-aussagen.UnitTesting", "..\Private.logik-aussagen.UnitTesting\Private.logik-aussagen.UnitTesting.csproj", "{B97420F0-1C11-4D75-8930-6B67F1DF0D05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6EC1D460-E51B-4618-98AF-E87781B0BEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EC1D460-E51B-4618-98AF-E87781B0BEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EC1D460-E51B-4618-98AF-E87781B0BEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B97420F0-1C11-4D75-8930-6B67F1DF0D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B97420F0-1C11-4D75-8930-6B67F1DF0D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B97420F0-1C11-4D75-8930-6B67F1DF0D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B97420F0-1C11-4D75-8930-6B67F1DF0D05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

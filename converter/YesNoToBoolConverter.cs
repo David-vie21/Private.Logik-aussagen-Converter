@@ -126,6 +126,8 @@ namespace Private.logik_aussagen
                 {
                     return "false Syntax => falsche Klammersetzung";
                 }
+                if (value is null)
+                    return "Invalit Input";
 
                 if (value is bool)
                 {

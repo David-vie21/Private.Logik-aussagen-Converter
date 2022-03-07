@@ -1,0 +1,32 @@
+﻿<Window x:Class="Private.logik_aussagen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Private.logik_aussagen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:YesNoToBoolConverter x:Key="yesNoToBoolConverter"></local:YesNoToBoolConverter>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Margin="15">
+            <GroupBox Header="Converter Logik Aussagen" Padding="0,10,0,0" Margin="20" FontSize="15">
+                <StackPanel>
+                    <TextBox x:Name="txtYesNo" Text="( true | false ) &amp;&amp; True | false" Height="39"/>
+                    <WrapPanel Margin="30" Height="26">
+                        <TextBlock Text="The Bool-Value of:  "/>
+                        <TextBlock TextDecorations="Underline" FontWeight="Bold" Text="{Binding ElementName=txtYesNo, Path=Text}"></TextBlock>
+                        <TextBlock Text=" is: "></TextBlock>
+                        <TextBlock FontWeight="Bold" Text="{Binding Text, Converter={StaticResource yesNoToBoolConverter}, ElementName=txtYesNo}"/>
+                    </WrapPanel>
+                    <CheckBox x:Name="chkBool" Content="Yes" IsChecked="{Binding Text, Converter={StaticResource yesNoToBoolConverter}, ElementName=txtYesNo}"/>
+                </StackPanel>
+
+            </GroupBox>
+            <Label  Height="151" Content="Damit das Program funktioiert _muss die korrekte Syntax eingehalten werden! Regeln:&#xA; 1. Zwischen denn Logischen Operatoren, denn Logischen Ausdrücken und denn Klammern müssen Leerzeichen sein. &#xA; 2. Es dürfen nur die folgenden Zeichen und Ausdrücke verwendet werden : True, False, &amp; |  !  ( )  &#xA; 3. Negationen: !True und !False  &#xA; 4. Klein und Größschreibung ist egal. &#xA; 5. Ob mann &amp; oder &amp;&amp; schreibt ist egal.  &#xA;Beispiele: &#xA;True &amp;&amp; false,    ( True || False ),   True | False || True &amp; False "/>
+        </StackPanel>
+        <Label Content="@David Ankenbrand - 3BHIF - HTL Spengergasse" Margin="10,390,-10,15" FontSize="13"/>
+
+    </Grid>
+</Window>

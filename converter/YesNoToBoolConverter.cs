@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace Private.logik_aussagen
+namespace Private.logik_aussagen.converter
 {
     //Spaß projekt zur Übung
     //Dieses Programm wandelt Logische Aussagen in boolische Werte um
@@ -19,6 +19,12 @@ namespace Private.logik_aussagen
         public bool mT3O = false;
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+
+            return ConverterUT(value);
+        }
+        public object ConverterUT(object value)
+        {
+
 
             try
             {
@@ -116,9 +122,14 @@ namespace Private.logik_aussagen
                 return false;
 
             }
+
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return ConverterBackUT(value);
+        }
+        public object ConverterBackUT(object value)
         {
             try
             {
@@ -133,10 +144,10 @@ namespace Private.logik_aussagen
                 {
                     if ((bool)value == true)
                     {
-                        return "yes";
+                        return "True";
                     }
                     else
-                        return "no";
+                        return "False";
                 }
                 return "false Syntax => falsche Klammersetzung";
             }
@@ -148,7 +159,7 @@ namespace Private.logik_aussagen
             }
         }
 
-        public  bool compare(object value)
+        public bool compare(object value)
         {
             //Console.WriteLine("Compare Value ===>> " + value);
             string s = value.ToString();
@@ -185,7 +196,7 @@ namespace Private.logik_aussagen
                 }
                 if (split[pos] == "!false")
                 {
-                    return false;
+                    return true;
                 }
 
 
@@ -545,5 +556,11 @@ namespace Private.logik_aussagen
             }
             return false;
         }
+        public int add(int a, int b)
+        {
+            return a + b;
+        }
     }
+
+
 }

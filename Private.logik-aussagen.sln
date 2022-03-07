@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private.logik-aussagen", "Private.logik-aussagen.csproj", "{7FFE7076-ECC9-4198-9D51-5A257A72FA77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private.Formel-Umwandler-Test-Klasse", "..\Private.Formel-Umwandler-Test-Klasse\Private.Formel-Umwandler-Test-Klasse.csproj", "{6EC1D460-E51B-4618-98AF-E87781B0BEBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Private.Formel-Umwandler-Test-Klasse", "..\Private.Formel-Umwandler-Test-Klasse\Private.Formel-Umwandler-Test-Klasse.csproj", "{6EC1D460-E51B-4618-98AF-E87781B0BEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private.logik-aussagen.UnitTesting", "..\Private.logik-aussagen.UnitTesting\Private.logik-aussagen.UnitTesting.csproj", "{B97420F0-1C11-4D75-8930-6B67F1DF0D05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Private.logik-aussagen3.XunitTesting", "..\Private.logik-aussagen3.XunitTesting\Private.logik-aussagen3.XunitTesting.csproj", "{21C3FD91-B1F4-41C1-99DE-E4DD4898E62A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{6EC1D460-E51B-4618-98AF-E87781B0BEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EC1D460-E51B-4618-98AF-E87781B0BEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EC1D460-E51B-4618-98AF-E87781B0BEBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B97420F0-1C11-4D75-8930-6B67F1DF0D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B97420F0-1C11-4D75-8930-6B67F1DF0D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B97420F0-1C11-4D75-8930-6B67F1DF0D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B97420F0-1C11-4D75-8930-6B67F1DF0D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C3FD91-B1F4-41C1-99DE-E4DD4898E62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C3FD91-B1F4-41C1-99DE-E4DD4898E62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C3FD91-B1F4-41C1-99DE-E4DD4898E62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C3FD91-B1F4-41C1-99DE-E4DD4898E62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@
         xmlns:local ="clr-namespace:Private.logik_aussagen"
         xmlns:converters="clr-namespace:Private.logik_aussagen.converter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="680" Width="800">
     <Window.Resources>
         <!--<converters:FromCompleteConverter x:Key="FCC"></converters:FromCompleteConverter>-->
         <converters:YesNoToBoolConverter x:Key="yesNoToBoolConverter"></converters:YesNoToBoolConverter>
@@ -26,9 +26,9 @@
                 </StackPanel>
 
             </GroupBox>
-            <Label  Height="151" Content="Damit das Programm funktioiert _muss die korrekte Syntax eingehalten werden! Regeln:&#xA; 1. Zwischen denn Logischen Operatoren, denn Logischen Ausdrücken und denn Klammern müssen Leerzeichen sein. &#xA; 2. Es dürfen nur die folgenden Zeichen und Ausdrücke verwendet werden : True, False, &amp; |  !  ( )  &#xA; 3. Negationen: !True und !False  &#xA; 4. Klein und Größschreibung ist egal. &#xA; 5. Ob mann &amp; oder &amp;&amp; schreibt ist egal.  &#xA;Beispiele: &#xA;True &amp;&amp; false,    ( True || False ),   True | False || True &amp; False " FontSize="13"/>
+            <Label  Height="287" Content="Damit das Programm funktioiert _muss die korrekte Syntax eingehalten werden! Regeln:&#xA; 1. Zwischen denn Logischen Operatoren, denn Logischen Ausdrücken und denn Klammern müssen Leerzeichen sein. &#xA; 2. Es dürfen nur die folgenden Zeichen und Ausdrücke verwendet werden :&#xA; True,   False,   AND = &amp;    OR= |    NOT= !    Klammern = ( )     XOR = ^    Äquivalenz = eql     Implikation= imp&#xA; 3. Negationen: !True und !False  &#xA; 4. Klein und Größschreibung ist egal. &#xA; 5. Ob mann &amp; oder &amp;&amp; schreibt ist egal.  &#xA;Beispiele: &#xA;True &amp;&amp; false,    ( True || False ),   True | False || True &amp; False    True eql True    False imp True   True OX False " FontSize="13"/>
         </StackPanel>
-        <Label Content="@David Ankenbrand - 3BHIF - HTL Spengergasse" Margin="10,390,-10,15" FontSize="13"/>
+        <Label Content="@David Ankenbrand - 3BHIF - HTL Spengergasse" Margin="10,542,-10,15" FontSize="13"/>
         <!--<GroupBox Header="Eingabe Formular" Margin="0,430,0,0">           
             
             <StackPanel>

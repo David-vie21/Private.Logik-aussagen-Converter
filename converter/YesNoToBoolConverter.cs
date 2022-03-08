@@ -36,7 +36,7 @@ namespace Private.logik_aussagen.converter
                 if (!isOk((string)value))
                 {
                     sY = true;
-                    return false;
+                    return "Invalit Input";
                 }
 
                 for (int i = 1; i > 0; i++)
@@ -44,7 +44,7 @@ namespace Private.logik_aussagen.converter
                     if (isClipInvald)
                     {
                         sY = true;
-                        return false;
+                        return "Invalit Input";
                     }
                     if (isClip(value))
                     {
@@ -55,7 +55,7 @@ namespace Private.logik_aussagen.converter
                         else if (isClipInvald)
                         {
                             sY = true;
-                            return false;
+                            return "Invalit Input";
                         }
                     }
                     else if (!isClip(value))
@@ -119,7 +119,7 @@ namespace Private.logik_aussagen.converter
                 Console.Error.WriteLine(ex);
                 Console.WriteLine("TRY CATCH Ausgelöchst! => Converter");
                 sY = true;
-                return false;
+                return "Invalit Input";
 
             }
 
@@ -149,7 +149,7 @@ namespace Private.logik_aussagen.converter
                     else
                         return "False";
                 }
-                return "false Syntax => falsche Klammersetzung";
+                return value;
             }
             catch (Exception ex)
             {
@@ -309,7 +309,7 @@ namespace Private.logik_aussagen.converter
 
             }
             //operator / vergleicher
-            switch (v)
+            switch (v.ToLower())
             {
                 case "&":
                     return (b1 && b2);
@@ -319,6 +319,14 @@ namespace Private.logik_aussagen.converter
                     return (b1 && b2);
                 case "||":
                     return (b1 || b2);
+                case "xo":
+                    return (b1 ^ b2);
+                case "^":
+                    return (b1 ^ b2);
+                case "imp":
+                    return (implies(b1, b2));
+                case "eql":
+                    return (equivalence(b1, b2));
                 default:
                     isClipInvald = true;
                     return false;
@@ -506,28 +514,30 @@ namespace Private.logik_aussagen.converter
         public bool isOk(string value)
         {
             string[] sA = value.Split(' ');
-            if (sA[0] == "|" || sA[0] == "&")
+            if (sA[0] == "|" || sA[0] == "&" || sA[0].ToLower() == "xo" || sA[0].ToLower() == "^" || sA[0].ToLower() == "eql" || sA[0].ToLower() == "imp")
             {
                 return false;
             }
 
             int l = sA.Length;
 
-            if (sA[l - 1] == "|" || sA[l - 1] == "&")
+            if (sA[l - 1] == "|" || sA[l - 1] == "&" || sA[l - 1].ToLower() == "xo" || sA[l-1].ToLower() == "^" || sA[l-1].ToLower() == "eql" || sA[l - 1].ToLower() == "imp")
             {
                 return false;
             }
 
-            if (sA[0] == "||" || sA[0] == "&&")
+            if (sA[0] == "||" || sA[0] == "&&" || sA[0] == "xo")
             {
                 return false;
             }
 
 
-            if (sA[l - 1] == "||" || sA[l - 1] == "&&")
+            if (sA[l - 1] == "||" || sA[l - 1] == "&&" || sA[l - 1] == "xo")
             {
                 return false;
             }
+
+
 
             int zählerOPs = 0;
             int zählerL = 0;
@@ -536,6 +546,14 @@ namespace Private.logik_aussagen.converter
                 if (s == "|" || s == "&")
                 { zählerOPs++; }
                 else if (s == "||" || s == "&&")
+                { zählerOPs++; }
+                else if (s.ToLower() == "xo")
+                { zählerOPs++; }
+                else if (s.ToLower() == "^")
+                { zählerOPs++; }
+                else if (s.ToLower() == "imp")
+                { zählerOPs++; }
+                else if (s.ToLower() == "eql")
                 { zählerOPs++; }
                 else if (s.ToLower() == "true" || s.ToLower() == "false")
                 { zählerL++; }
@@ -556,10 +574,22 @@ namespace Private.logik_aussagen.converter
             }
             return false;
         }
-        public int add(int a, int b)
+
+        public bool implies(bool b1, bool b2) //imp
         {
-            return a + b;
+            if (b1 == true && b2 == false)
+                return false;
+            return true;
         }
+        public bool equivalence(bool b1, bool b2) //eql
+        {
+            if (b1 == true && b2 == true)
+                return true;
+            if (b1 == false && b2 == false)
+                return true;
+            return false;
+        }
+
     }
 
 

@@ -6,7 +6,8 @@ Regeln:
 2. Es dürfen nur die folgenden Zeichen und Ausdrücke verwendet werden : 
 True,   False,   AND = &    OR= |    NOT= !    Klammern = ( )     XOR = ^    Äquivalenz = eql     Implikation= imp
  
-5. Negationen: !True und !False  &#xA; 4. Klein und Größschreibung ist egal. 
+3. Negationen: !True und !False  &#xA; 
+4. Klein und Größschreibung ist egal. 
 6. Ob mann &amp; oder &amp;&amp; schreibt ist egal.
 Beispiele:
 True && false,    ( True || False ),   True | False || True & False    True eql True    False imp True   True OX False 
